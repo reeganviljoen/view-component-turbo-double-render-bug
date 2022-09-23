@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :button_clicks
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  root "button_clicks#index"
+  root "button_clicks#broken"
+  get "fixed", to: "button_clicks#fixed"
+  post "redirect_to_broken", to: "button_clicks#redirect_to_broken"
+  post "redirect_to_fixed", to: "button_clicks#redirect_to_fixed"
 end
