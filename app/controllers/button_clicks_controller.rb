@@ -1,10 +1,7 @@
 class ButtonClicksController < ApplicationController
   # get / - This causes a double render - resulting in no flash messages
   def broken
-    render(
-      PageComponent.new(redirect_to_broken_path),
-      content_type: "text/html",
-    )
+      render(PageComponent.new(redirect_to_broken_path),)
   end
 
   # get /fixed - This works as expected

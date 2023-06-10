@@ -1,3 +1,5 @@
-<p style="color: green"><%= controller.notice %></p>
+<%= turbo_frame_tag 'page_component' do %>
+  <p style="color: green"><%= controller.notice %></p>
 
-<%= button_to "Create", @path %>
+  <%= button_to "Create", @path %>
+<% end %>
